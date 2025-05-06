@@ -1,0 +1,13 @@
+2025-05-07 00:01:53,184 - INFO - script started
+2025-05-07 00:01:53,185 - INFO - starting data processing
+2025-05-07 00:01:53,185 - INFO - starting download of oscar_age_female.csv
+2025-05-07 00:01:54,145 - INFO - successfully downloaded oscar_age_female.csv
+2025-05-07 00:01:54,145 - INFO - starting download of oscar_age_male.csv
+2025-05-07 00:01:55,185 - INFO - successfully downloaded oscar_age_male.csv
+2025-05-07 00:01:55,186 - INFO - reading file: oscar_age_female.csv
+2025-05-07 00:01:55,188 - INFO - successfully read oscar_age_female.csv
+2025-05-07 00:01:55,188 - INFO - reading file: oscar_age_male.csv
+2025-05-07 00:01:55,189 - INFO - successfully read oscar_age_male.csv
+2025-05-07 00:01:55,189 - INFO - merging datasets
+2025-05-07 00:01:55,193 - INFO - saved merged data to oscar_age_gender.csv
+2025-05-07 00:01:55,193 - INFO - script finished
