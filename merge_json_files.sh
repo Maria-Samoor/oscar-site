@@ -1,9 +1,9 @@
 #!/bin/bash
-
+source config.env
 # download the json files using wget, -q for quiet mode in order not to output anything in the terminal, and -O for the output file name
 download_files() {
-  wget -q -O tmp_female.json https://assets.harridev.com/interview/oscar_age_female.json
-  wget -q -O tmp_male.json https://assets.harridev.com/interview/oscar_age_male.json
+   wget -q -O tmp_female.json "$FEMALE_URL"
+   wget -q -O tmp_male.json "$MALE_URL"
 }
 
 # add gender field directly using map function where key is Gender and Value is F or M based on the file name

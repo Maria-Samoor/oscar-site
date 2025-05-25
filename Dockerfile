@@ -4,6 +4,7 @@ FROM httpd:alpine
 RUN apk add --no-cache jq bash && rm -rf /var/cache/apk/*
 
 # copy the script with execute permission file and json file that contains the data
+COPY config.env /usr/local/bin/
 COPY --chmod=755 generate_oscar_html.sh /usr/local/bin/
 COPY oscar_age_gender.json /usr/local/bin/
 
@@ -14,7 +15,7 @@ WORKDIR /usr/local/bin
 RUN ./generate_oscar_html.sh && \
     cp -r Years/ Names/ /usr/local/apache2/htdocs/ && \
     chown -R www-data:www-data /usr/local/apache2/htdocs/ && \
-    rm -rf Years/ Names/ generate_oscar_html.sh oscar_age_gender.json
+    rm -rf Years/ Names/ generate_oscar_html.sh oscar_age_gender.json config.env
 
 # apache hardening configurations to reduce amount of info server send to production env
 RUN sed -i \
